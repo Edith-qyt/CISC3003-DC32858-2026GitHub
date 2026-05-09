@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary | STUDIO.05</title>
+    <link rel="stylesheet" href="css/cisc3003-PairAssgn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
+
+</head>
+<body class="summary-page-body">
+    <header class="header">
+        <nav class="wrapper navbar">
+            <div class="brand">STUDIO<span>.05</span></div>
+            <div class="hamburger" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cisc3003-PairAssgn-Profile.html">Profile</a></li>
+                <li><a href="cisc3003-PairAssgn-Summary.html" class="active">Summary</a></li>
+                <li><a href="cisc3003-PairAssgn-Showcase.html">Showcase</a></li>
+                <li><a href="cisc3003-PairAssgn-Qualification.html">Qualification</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-green">
+            <div class="hero-wrapper">
+                <span class="tag-line">// STRATEGY & CORPORATE VISION</span>
+                <h1>Strategic Roadmap <br>& Business Goals.</h1>
+            </div>
+        </section>
+
+        <div class="main-layout wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-sticky">
+                    <p class="sidebar-label">CHAPTERS</p>
+                    <ul class="nav-wrapper">
+                        <li><a href="#goals">01. Goals</a></li>
+                        <li><a href="#commitments">02. Commitments</a></li>
+                        <li><a href="#directions">03. Directions</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="content-area">
+                <section id="goals" class="section-common summary-card-white reveal">
+                    <span class="section-tag">01 / OUR BUSINESS GOALS</span>
+                    <h2 class="big-topic-title">Driving Excellence <br>Through Results.</h2>
+                    <div class="summary-content-flex">
+                        <i class="fa fa-bullseye target-icon"></i>
+                        <div class="text-group">
+                            <p class="big-text">Our primary objective is to deliver <strong>scalable digital solutions</strong> that prioritize user engagement and technical integrity. We aim to finalize <strong>50+ enterprise-grade projects</strong> by the end of Q4, maintaining a 100% deployment success rate.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="commitments" class="section-common summary-section-dark reveal">
+                    <div class="creative-border-top"></div>
+                    <span class="section-tag">02 / PROFESSIONAL COMMITMENTS</span>
+                    <h2 class="big-topic-title" style="color: #fff;">Why Choose <br>Our Services.</h2>
+                    
+                    <div class="summary-glass-box">
+                        <div class="status-badge"><i class="fa fa-shield"></i> Standard of Excellence</div>
+                        <p style="margin-bottom: 30px; font-size: 1.1rem; color: #fff;">Get high-quality results, faster delivery, and tailored solutions that grow with your business.</p>
+                        
+                        <div class="commitment-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                            <div class="commit-item reveal delay-1">
+                                <h4 style="color: var(--accent-green); margin-bottom: 10px;"><i class="fa fa-bolt"></i> Fast & Reliable Delivery</h4>
+                                <p>We prioritize timely completion through optimized workflows without compromising on technical quality.</p>
+                            </div>
+                            <div class="commit-item reveal delay-2">
+                                <h4 style="color: var(--accent-green); margin-bottom: 10px;"><i class="fa fa-sliders"></i> Tailored to Your Needs</h4>
+                                <p>Every architectural decision is customized to align with your unique operational goals and market challenges.</p>
+                            </div>
+                        </div>
+                        <p style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-style: italic;">
+                            We focus on value, efficiency, and long-term success for every project.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="directions" class="section-common summary-section-pale reveal">
+                    <span class="section-tag">03 / FUTURE DIRECTIONS</span>
+                    <h2 class="big-topic-title">The Innovation <br>Frontier.</h2>
+                    <p class="big-text">Our roadmap includes the integration of <strong>AI-enhanced automation</strong> and <strong>immersive 3D web environments</strong>, bridging the gap between complex data logic and seamless human interaction.</p>
+                    
+                    <div class="roadmap-line">
+                        <div class="dot"><span>2024</span></div>
+                        <span class="line"></span>
+                        <div class="dot"><span>2025</span></div>
+                        <span class="line"></span>
+                        <div class="dot active"><span>2026</span></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer-dark">
+            <div class="footer-container wrapper">
+                <div class="footer-side">© 2026 Studio.05</div>
+                <div class="footer-main">
+                    CISC3003 - 2026: Pair 05 <br>ZHU YI FEI (DC327618) <br> LIN CHO KIO (DC325411) <br> QU YI TING (DC328581)
+                </div>
+                <div class="footer-side text-right">Privacy & Terms</div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. 原有的侧边栏滚动高亮逻辑 (保持不变)
+            const sections = document.querySelectorAll('section[id]');
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 300) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active-section');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active-section');
+                    }
+                });
+            });
+
+            // 2. 新增：滚动进入视口触发动画逻辑
+            const observerOptions = {
+                threshold: 0.15, // 元素出现 15% 时触发
+                rootMargin: "0px 0px -50px 0px" // 提前触发，视觉更顺滑
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // 如果希望动画只执行一次，可以取消监听
+                        // revealObserver.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            // 查找所有带 reveal 类的元素并监听
+            document.querySelectorAll('.reveal').forEach(el => {
+                revealObserver.observe(el);
+            });
+        });
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navList = document.getElementById('nav-list');
+
+        menuBtn.addEventListener('click', () => {
+            // 切换菜单显示/隐藏
+            navList.classList.toggle('show');
+            // 切换汉堡图标动画效果
+            menuBtn.classList.toggle('open');
+        });
+
+        // 点击菜单项后自动关闭（提升体验）
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show');
+                menuBtn.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>

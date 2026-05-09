@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CISC3003-SugEx09-2026MAR28/cisc3003-sugex09-before.php.txt&apos; to &apos;cisc3003-sugex09-before.php&apos;" description="Rename resource &apos;cisc3003-sugex09-before.php.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="cisc3003-sugex09-before.php.txt" name="cisc3003-sugex09-before.php" stamp="1774950507087" updateReferences="true"/>
+</session>

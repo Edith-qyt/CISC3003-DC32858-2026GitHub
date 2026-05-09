@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase | STUDIO.05</title>
+    <link rel="stylesheet" href="css/cisc3003-PairAssgn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
+</head>
+
+<body class="showcase-page-body">
+    <header class="header">
+        <nav class="wrapper navbar">
+            <div class="brand">STUDIO<span>.05</span></div>
+            <div class="hamburger" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cisc3003-PairAssgn-Profile.html">Profile</a></li>
+                <li><a href="cisc3003-PairAssgn-Summary.html">Summary</a></li>
+                <li><a href="cisc3003-PairAssgn-Showcase.html" class="active">Showcase</a></li>
+                <li><a href="cisc3003-PairAssgn-Qualification.html">Qualification</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-green">
+            <div class="hero-wrapper">
+                <span class="tag-line">// STRATEGIC SOLUTIONS</span>
+                <h1>Digital Excellence <br>& Technical Artifacts.</h1>
+            </div>
+        </section>
+
+        <div class="main-layout wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-sticky">
+                    <p class="sidebar-label">CHAPTERS</p>
+                    <ul class="nav-wrapper">
+                        <div class="track-line">
+                            <svg width="100%" height="2" viewBox="0 0 1000 2" preserveAspectRatio="none">
+                                <line x1="0" y1="1" x2="1000" y2="1" stroke="#ddd" stroke-width="2" stroke-dasharray="8,8" />
+                            </svg>
+                        </div>
+                        <li><a href="#projects">01. Portfolio</a></li>
+                        <li><a href="#accomplishments">02. Achievements</a></li>
+                        <li><a href="#offers">03. Offers</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="content-area">
+                <section id="projects" class="section-common reveal">
+                    <span class="section-tag reveal-left">01 / OUR PORTFOLIO PROJECTS</span>
+                    <h2 class="big-topic-title reveal delay-1">Selected <br>Case Studies.</h2>
+                    <div class="showcase-grid">
+                        <a href="cisc3003-PairAssgn-demo02.html" class="showcase-item tall reveal-zoom delay-1" style="background-image: url('images/demo2.png');">
+                            <div class="item-overlay">
+                                <h3>Rijks Museum</h3>
+                                <p>Dutch Portraits of the Golden Age From the Rijks Museum</p>
+                            </div>
+                        </a>
+                        <a href="cisc3003-PairAssgn-demo01.html" class="showcase-item reveal-zoom delay-2" style="background-image: url('images/demo1.png');">
+                            <div class="item-overlay">
+                                <h3>RedStore</h3>
+                                <p>E-commerce System Architecture</p>
+                            </div>
+                        </a>
+                        <a href="cisc3003-PairAssgn-demo03.html" class="showcase-item reveal-zoom delay-3" style="background-image: url('images/demo3.png');">
+                            <div class="item-overlay">
+                                <h3>CRM Admin</h3>
+                                <p>Digital Transformation</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <section id="accomplishments" class="section-common showcase-bg-grey reveal">
+                    <span class="section-tag reveal-left">02 / OUR ACCOMPLISHMENTS</span>
+                    <h2 class="big-topic-title reveal delay-1">Trusted Results <br>& Global Impact.</h2>
+                    <div class="stat-grid">
+                        <div class="stat-card reveal delay-1">
+                            <i class="fa fa-folder-open-o"></i>
+                            <div class="stat-num">200+</div>
+                            <p>We deliver great work always</p>
+                        </div>
+                        <div class="stat-card reveal delay-2">
+                            <i class="fa fa-briefcase"></i>
+                            <div class="stat-num">10+</div>
+                            <p>Experience you can count on</p>
+                        </div>
+                        <div class="stat-card reveal delay-3">
+                            <i class="fa fa-trophy"></i>
+                            <div class="stat-num">20+</div>
+                            <p>Award-Winning Work & Results</p>
+                        </div>
+                        <div class="stat-card reveal delay-4">
+                            <i class="fa fa-users"></i>
+                            <div class="stat-num">5K+</div>
+                            <p>Happy Clients worldwide</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="offers" class="section-common showcase-bg-dark reveal">
+                    <span class="section-tag reveal-left" style="color: rgba(191, 255, 0, 0.887);">03 / SERVICE PACKAGES</span>
+                    <h2 class="big-topic-title reveal delay-1" style="color: #fff;">Our Core <br>Business Offers.</h2>
+
+                    <div class="pricing-grid">
+                        <div class="pricing-card reveal delay-1">
+                            <span class="plan-badge">Basic Plan</span>
+                            <div class="plan-price">$99 <span>/Annual</span></div>
+                            <p class="plan-target">Ideal for Small Teams, Startups, and Expanding Companies.</p>
+                            <div class="feature-list">
+                                <h5>Feature Description</h5>
+                                <ul>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Custom Website Design</li>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Basic & Technical SEO</li>
+                                    <li class="cross"><i class="fa fa-times-circle-o"></i> Support and Maintenance</li>
+                                    <li class="cross"><i class="fa fa-times-circle-o"></i> E-commerce Integration</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pricing-card reveal delay-1">
+                            <span class="plan-badge">Standard Plan</span>
+                            <div class="plan-price">$399 <span>/Annual</span></div>
+                            <p class="plan-target">Designed for Small Teams, Startups, and Scaling Businesses.</p>
+                            <div class="feature-list">
+                                <h5>Feature Description</h5>
+                                <ul>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Custom Website Design</li>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Basic & Technical SEO</li>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Support and Maintenance</li>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> E-commerce Integration</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pricing-card reveal delay-1">
+                            <span class="plan-badge">Premium Plan</span>
+                            <div class="plan-price">$799 <span>/Annual</span></div>
+                            <p class="plan-target">Tailored for Large Teams and Developing Enterprises.</p>
+                            <div class="feature-list">
+                                <h5>Feature Description</h5>
+                                <ul>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Custom Website Design</li>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Basic & Technical SEO</li>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Support and Maintenance</li>
+                                    <li class="check"><i class="fa fa-check-circle-o"></i> Brand CMS Palette</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer-dark">
+            <div class="footer-container wrapper">
+                <div class="footer-side">© 2026 Studio.05</div>
+                <div class="footer-main">
+                    CISC3003 - 2026: Pair 05 <br>ZHU YI FEI (DC327618) <br> LIN CHO KIO (DC325411) <br> QU YI TING (DC328581)
+                </div>
+                <div class="footer-side text-right">Privacy & Terms</div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. 侧边栏高亮
+            const sections = document.querySelectorAll('section[id]');
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const scrollPos = window.scrollY + (window.innerHeight / 3);
+
+                sections.forEach(section => {
+                    if (scrollPos >= section.offsetTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active-section');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active-section');
+                    }
+                });
+            });
+
+            // 2. Intersection Observer 触发动画
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            const animatedEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-zoom');
+            animatedEls.forEach(el => revealObserver.observe(el));
+        });
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navList = document.getElementById('nav-list');
+
+        menuBtn.addEventListener('click', () => {
+            // 切换菜单显示/隐藏
+            navList.classList.toggle('show');
+            // 切换汉堡图标动画效果
+            menuBtn.classList.toggle('open');
+        });
+
+        // 点击菜单项后自动关闭（提升体验）
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show');
+                menuBtn.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

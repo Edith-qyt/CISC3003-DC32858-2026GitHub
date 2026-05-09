@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDIO.05 | Elite Web Design & Digital Engineering</title>
+    <link rel="stylesheet" href="css/cisc3003-PairAssgn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+
+</head>
+<body>
+    <header class="header">
+        <nav class="wrapper navbar">
+            <div class="brand">STUDIO<span>.05</span></div>
+            <div class="hamburger" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="cisc3003-PairAssgn.html" >Home</a></li>
+                <li><a href="cisc3003-PairAssgn-Profile.html">Profile</a></li>
+                <li><a href="cisc3003-PairAssgn-Summary.html">Summary</a></li>
+                <li><a href="cisc3003-PairAssgn-Showcase.html">Showcase</a></li>
+                <li><a href="cisc3003-PairAssgn-Qualification.html">Qualification</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-green">
+            <div class="hero-wrapper">
+                <span class="tag-line">// DIGITAL CRAFTSMANSHIP</span>
+                <h1>Engineering The <br>Next Digital Frontier</h1>
+            </div>
+        </section>
+
+        <div class="main-layout wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-sticky">
+                    <p class="sidebar-label">CHAPTERS</p>
+                    <ul class="nav-wrapper">
+                        <div class="track-line">
+                            <svg width="100%" height="2" viewBox="0 0 1000 2" preserveAspectRatio="none">
+                                <line x1="0" y1="1" x2="1000" y2="1" stroke="#ddd" stroke-width="2" stroke-dasharray="8,8" />
+                            </svg>
+                        </div>
+                        <li><a href="#company">01. Studio</a></li>
+                        <li><a href="#partners">02. Experts</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="content-area">
+                <section id="company" class="section-common reveal">
+                    <span class="section-tag reveal-left">01 / WHO WE ARE</span>
+                    <h2 class="big-topic-title reveal delay-1">A Technical <br>Powerhouse.</h2>
+
+                    <div class="company-split-content">
+                        <div class="company-text-side">
+                            <p class="big-text reveal delay-2">
+                                Studio.05 is a multidisciplinary collective specializing in the fusion of <strong>Immersive 3D Graphics</strong> and <strong>High-Performance Data Architectures</strong>. We redefine digital interaction for the 2026 web.
+                            </p>
+                            <div class="home-stats-grid">
+                                <div class="home-stat-card reveal delay-2">
+                                    <i class="fa fa-users"></i>
+                                    <div class="home-stat-text">
+                                        <h3>3</h3>
+                                        <p>Domain Experts</p>
+                                    </div>
+                                </div>
+                                <div class="home-stat-card reveal delay-3">
+                                    <i class="fa fa-calendar"></i>
+                                    <div class="home-stat-text">
+                                        <h3>2026</h3>
+                                        <p>Established</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="company-image-side reveal-zoom delay-1">
+                            <div class="group-photo-container">
+                                <img src="images/TeamPicture1.jpg" alt="Studio.05 Team" class="group-photo">
+                                <div class="photo-accent-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="partners" class="section-common section-partners">
+                    <span class="section-tag reveal-left">02 / CORE STRATEGISTS</span>
+                    <h2 class="big-topic-title reveal delay-1">Crafting Value <br>Through Code.</h2>
+                    
+                    <div class="partners-grid-final">
+                        <article class="v5-card accent-green-bg card-zhu reveal delay-1">
+                            <img src="images/Partner-ZYF.jpg" class="avatar-circle">
+                            <div class="card-info">
+                                <span class="card-badge">Technical Director</span>
+                                <h3>Zhu Yi Fei</h3>
+                                <p>Mastering complex 3D rendering and high-frequency data visualization for modern interfaces.</p>
+                                <a href="Individual-ZYF/cisc3003-IndAssgn-home.html" class="more-link">more &rarr;</a>
+                            </div>
+                        </article>
+
+                        <article class="v5-card grey-card card-lin reveal delay-2">
+                            <img src="images/diana.jpg" class="avatar-circle">
+                            <div class="card-info">
+                                <span class="card-badge">Creative Lead</span>
+                                <h3>Lin Cho Kio</h3>
+                                <p>Translating business objectives into aesthetic excellence and high-conversion UI/UX logic.</p>
+                                <a href="Individual-LCQ/cisc3003-IndAssgn-home.html" class="more-link">more &rarr;</a>
+                            </div>
+                        </article>
+
+                        <article class="v5-card pale-blue-bg card-qu reveal delay-3">
+                            <img src="images/Partner-QYT.jpg" class="avatar-circle">
+                            <div class="card-info">
+                                <span class="card-badge">System Architect</span>
+                                <h3>Qu Yi Ting</h3>
+                                <p>Engineering robust SQL infrastructures and secure, scalable backend ecosystems.</p>
+                                <a href="Individual-QYT/public/cisc3003-IndAssgn-home.html" class="more-link">more &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer-dark">
+            <div class="footer-container wrapper">
+                <div class="footer-side">© 2026 Studio.05</div>
+                <div class="footer-main">
+                    CISC3003 - 2026: Pair 05 <br>ZHU YI FEI (DC327618) <br> LIN CHO KIO (DC325411) <br> QU YI TING (DC328581)
+                </div>
+                <div class="footer-side text-right">Privacy & Terms</div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. 侧边栏高亮逻辑 (ScrollSpy)
+            const sections = document.querySelectorAll('section[id]');
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+    
+            const updateActiveSection = () => {
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 200) {
+                        currentSection = section.id;
+                    }
+                });
+    
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active-section');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active-section');
+                    }
+                });
+            };
+    
+            window.addEventListener('scroll', updateActiveSection);
+            updateActiveSection(); // 初始化执行一次
+    
+            // 2. 动效触发逻辑 (Intersection Observer)
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px" 
+            });
+    
+            const animatedEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-zoom');
+            animatedEls.forEach(el => revealObserver.observe(el));
+    
+            // 3. 移动端菜单逻辑
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const navList = document.getElementById('nav-list');
+    
+            if (menuBtn && navList) {
+                menuBtn.addEventListener('click', () => {
+                    navList.classList.toggle('show');
+                    menuBtn.classList.toggle('open');
+                });
+    
+                // 点击菜单项后自动关闭
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navList.classList.remove('show');
+                        menuBtn.classList.remove('open');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

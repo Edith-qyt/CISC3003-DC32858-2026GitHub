@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Summary | My Personal Website</title>
+    <link rel="stylesheet" href="../css/summary.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <img class="header__image" src="../images/avatar.jpg" alt="My Avatar" />
+            <nav class="header__nav">
+                <a class="header__nav-item" href="cisc3003-sugEx03-home.html">Home</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-profile.html">Profile</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-summary.html">Summary</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-showcase.html">Showcase</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-qualification.html">Qualification</a>
+            </nav>
+            <a id="btnOpen" class="header__open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+            
+    <aside id="offcanvas" class="offcanvas">
+        <div class="offcanvas__content">
+            <a id="btnClose" class="offcanvas__close">
+                <span></span>
+                <span></span>                    
+            </a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-home.html">Home</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-profile.html">Profile</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-summary.html">Summary</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-showcase.html">Showcase</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-qualification.html">Qualification</a>
+        </div>
+    </aside>
+
+    <main>
+        <article>
+            <section id="goals" class="block__wrapper">
+                <div class="block">
+                    <div class="block__content -text">
+                        <h2>My Goals and Intended Learning Outcomes</h2>
+                        <div class="intro">
+                            <ul>
+                                <li>Master HTML5/CSS3 responsive layout skills (by end of 2026)</li>
+                                <li>Learn JavaScript basic syntax and DOM operation (by mid-2026)</li>
+                                <li>Complete 2+ front-end projects independently (by end of 2026)</li>
+                            </ul>
+                        </div>
+                        <div class="grid">
+                            <div class="grid__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="development" class="block__wrapper">
+                <div class="block">
+                    <div class="block__content -text">
+                        <h2>My Personal/Professional Development Planning</h2>
+                        <div class="intro">
+                            <h3>Short-term (6 months):</h3>
+                            <p>Complete CISC3003 course, practice 10+ CSS layout cases, write 5 technical blogs.</p>
+                            <h4>Long-term (1-2 years):</h4>
+                            <p>Learn front-end frameworks (React/Vue), participate in open source projects, apply for front-end internship.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="reflection" class="block__wrapper">
+                <div class="block">
+                    <div class="block__content -text">
+                        <h2>My Reflection and Future Directions</h2>
+                        <div class="intro">
+                            Reflection: I need to improve my efficiency in CSS layout and practice more complex responsive designs.<br>
+                            Future Directions: Focus on front-end engineering (webpack, Git) and user experience design.
+                        </div>
+                        <div class="grid">
+                            <div class="grid__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        CISC3003 Web Programming - 2026: DC328581 + Edith Qu
+    </footer>
+
+    <script>
+        const btnOpen = document.getElementById('btnOpen');
+        const btnClose = document.getElementById('btnClose');
+        const offcanvas = document.getElementById('offcanvas');
+        
+        btnOpen.addEventListener('click', () => {
+            offcanvas.classList.add('open');
+            document.body.classList.add('noscroll');
+        });
+        
+        btnClose.addEventListener('click', () => {
+            offcanvas.classList.remove('open');
+            document.body.classList.remove('noscroll');
+        });
+    </script>
+</body>
+</html>

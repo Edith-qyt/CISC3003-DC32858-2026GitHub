@@ -1,0 +1,74 @@
+<?php
+function readCustomers($filename) {
+    $customers = [];
+    if (!file_exists($filename) || !is_readable($filename)) {
+        return $customers;
+    }
+    
+    $handle = fopen($filename, 'r');
+    while (($line = fgets($handle)) !== false) {
+        $line = trim($line);
+        if (empty($line)) continue;
+        
+        $fields = explode(';', $line);
+        if (count($fields) < 12) continue;
+        
+        $customer = [
+            'id' => trim($fields[0]),
+            'first_name' => trim($fields[1]),
+            'last_name' => trim($fields[2]),
+            'email' => trim($fields[3]),
+            'university' => trim($fields[4]),
+            'address' => trim($fields[5]),
+            'city' => trim($fields[6]),
+            'state' => trim($fields[7]),
+            'country' => trim($fields[8]),
+            'zip' => trim($fields[9]),
+            'phone' => trim($fields[10]),
+            'sales' => trim($fields[11])
+        ];
+        $customers[$customer['id']] = $customer;
+    }
+    fclose($handle);
+    return $customers;
+}
+
+function readOrders($customer_id, $filename) {
+    $orders = [];
+    // 检查文件是否存在
+    if (!file_exists($filename) || !is_readable($filename)) {
+        error_log("readOrders: 文件不存在或不可读 - $filename");
+        return $orders;
+    }
+    
+    $handle = fopen($filename, 'r');
+    // 把目标ID转成字符串，去掉所有空格
+    $target_id = (string)trim($customer_id);
+    error_log("readOrders: 目标客户ID - $target_id");
+    
+    while (($line = fgets($handle)) !== false) {
+        $line = trim($line);
+        if (empty($line)) continue;
+        
+        $fields = explode(',', $line);
+        if (count($fields) < 5) continue;
+        
+        // 订单里的客户ID，去掉所有空格，转成字符串
+        $order_customer_id = (string)trim($fields[1]);
+        error_log("readOrders: 订单客户ID - $order_customer_id");
+        
+        // 宽松匹配：转成字符串后相等就匹配，不怕空格、格式问题
+        if ($order_customer_id === $target_id) {
+            $orders[] = [
+                'order_id' => trim($fields[0]),
+                'isbn' => trim($fields[2]),
+                'title' => trim($fields[3]),
+                'category' => trim($fields[4])
+            ];
+        }
+    }
+    fclose($handle);
+    error_log("readOrders: 匹配到的订单数 - " . count($orders));
+    return $orders;
+}
+?>

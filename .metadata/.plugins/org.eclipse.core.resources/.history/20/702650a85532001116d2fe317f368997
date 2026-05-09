@@ -1,0 +1,188 @@
+<?php
+error_reporting(0);
+include __DIR__ . '/includes/book-utilities.inc.php';
+
+// 读取数据
+$customers = readCustomers('data/customers.txt');
+$selected_id = $_GET['customer_id'] ?? '';
+$selected = $customers[$selected_id] ?? null;
+$orders = $selected ? readOrders($selected_id, 'data/orders.txt') : [];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CISC3003 Suggested Exercise 10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- 本地样式文件 -->
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/demo-styles.css">
+
+    <!-- 修复布局+样式的自定义CSS -->
+    <style>
+        /* 1. 强制MDL网格列宽正确，左右比例8:4，匹配参考图 */
+        .mdl-grid {
+            width: 100% !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+        }
+        /* 2. 客户表格占8列，右侧占4列，完美比例 */
+        .customers-col {
+            width: calc(8/12 * 100%) !important;
+        }
+        .details-col {
+            width: calc(4/12 * 100%) !important;
+        }
+        /* 3. 卡片高度一致，垂直排列 */
+        .card-lesson {
+            width: 100% !important;
+            margin-bottom: 24px !important;
+        }
+        /* 4. 表格宽度100%，撑满卡片 */
+        .mdl-data-table {
+            width: 100% !important;
+        }
+        /* 5. 客户链接颜色匹配参考图橙色 */
+        .mdl-data-table a {
+            color: #ff9800 !important;
+            text-decoration: none !important;
+        }
+        .mdl-data-table a:hover {
+            text-decoration: underline !important;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/material.min.js"></script>
+    <script src="js/jquery.sparkline.2.1.2.js"></script>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <?php include __DIR__ . '/includes/header.inc.php'; ?>
+    <?php include __DIR__ . '/includes/left-nav.inc.php'; ?>
+    
+    <main class="mdl-layout__content mdl-color--grey-50">
+        <section class="page-content">
+            <!-- 主网格：8列客户 + 4列详情，完美比例 -->
+            <div class="mdl-grid">
+                <!-- Customers 卡片：8列，占左侧2/3 -->
+                <div class="mdl-cell mdl-cell--8-col customers-col card-lesson mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-color--orange">
+                        <h2 class="mdl-card__title-text">Customers</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <table class="mdl-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                    <th class="mdl-data-table__cell--non-numeric">University</th>
+                                    <th class="mdl-data-table__cell--non-numeric">City</th>
+                                    <th>Sales</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($customers as $c): ?>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <a href="?customer_id=<?= htmlspecialchars($c['id']) ?>">
+                                            <?= htmlspecialchars($c['first_name'] . ' ' . $c['last_name']) ?>
+                                        </a>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric"><?= htmlspecialchars($c['university']) ?></td>
+                                    <td class="mdl-data-table__cell--non-numeric"><?= htmlspecialchars($c['city']) ?></td>
+                                    <td>
+                                        <span class="spark" data-values="<?= htmlspecialchars($c['sales']) ?>"></span>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 右侧详情列：4列，占右侧1/3，垂直排列两个卡片 -->
+                <div class="mdl-cell mdl-cell--4-col details-col">
+                    <!-- Customer Details 卡片 -->
+                    <div class="card-lesson mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-color--deep-purple mdl-color-text--white">
+                            <h2 class="mdl-card__title-text">Customer Details</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <?php if ($selected): ?>
+                                <h4><?= htmlspecialchars($selected['first_name'] . ' ' . $selected['last_name']) ?></h4>
+                                <p>Email: <?= htmlspecialchars($selected['email']) ?></p>
+                                <p>University: <?= htmlspecialchars($selected['university']) ?></p>
+                                <p>Address: <?= htmlspecialchars($selected['address'] . ', ' . $selected['city']) ?></p>
+                                <p>Phone: <?= htmlspecialchars($selected['phone']) ?></p>
+                            <?php else: ?>
+                                <p>Select a customer to view details.</p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <!-- Order Details 卡片 -->
+                    <div class="card-lesson mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-color--deep-purple mdl-color-text--white">
+                            <h2 class="mdl-card__title-text">Order Details</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <table class="mdl-data-table mdl-shadow--2dp">
+                                <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric">Cover</th>
+                                        <th class="mdl-data-table__cell--non-numeric">ISBN</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php if ($selected && !empty($orders)): ?>
+                                        <?php foreach ($orders as $o): ?>
+                                        <tr>
+                                            <td class="mdl-data-table__cell--non-numeric">
+                                                <img src="images/<?= htmlspecialchars($o['isbn']) ?>.jpg" 
+                                                     alt="<?= htmlspecialchars($o['title']) ?>" 
+                                                     style="width:50px; height:auto;" />
+                                            </td>
+                                            <td class="mdl-data-table__cell--non-numeric"><?= htmlspecialchars($o['isbn']) ?></td>
+                                            <td class="mdl-data-table__cell--non-numeric"><?= htmlspecialchars($o['title']) ?></td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    <?php endif; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script>
+$(function() {
+    $('.spark').each(function() {
+        var valStr = $(this).data('values');
+        if (!valStr) return;
+        var v = valStr.split(',');
+        $(this).sparkline(v, { 
+            type: 'bar', 
+            height: 20,
+            barWidth: 3,
+            barSpacing: 1,
+            barColor: '#1565c0'
+        });
+    });
+});
+</script>
+</body>
+</html>

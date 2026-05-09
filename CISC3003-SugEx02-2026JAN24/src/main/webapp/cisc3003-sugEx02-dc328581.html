@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>My Personal Website</title>
+        <link rel="stylesheet" href="cisc3003-SugEx02.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="wrapper">
+                <img class="header__image" src="images/avatar.jpg" alt="My Avatar" />
+                <nav class="header__nav">
+                    <a class="header__nav-item" data-scroll href="#home">Home</a>
+                    <a class="header__nav-item" data-scroll href="#about">About Me</a>
+                    <a class="header__nav-item" data-scroll href="#values">My Values</a>
+                    <a class="header__nav-item" data-scroll href="#career">Career</a>
+                    <a class="header__nav-item" data-scroll href="#interests">Interests</a>
+                    <a class="header__nav-item" data-scroll href="#blog">Blog</a>
+                    <a class="header__nav-item" data-scroll href="#contact">Contact</a>
+                </nav>
+                <a id="btnOpen" class="header__open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </header>
+                
+        <aside id="offcanvas" class="offcanvas">
+            <div class="offcanvas__content">
+                <a id="btnClose" class="offcanvas__close">
+                    <span></span>
+                    <span></span>                    
+                </a>
+                <a class="offcanvas__item" data-scroll href="#home">Home</a>
+                <a class="offcanvas__item" data-scroll href="#about">About Me</a>
+                <a class="offcanvas__item" data-scroll href="#values">My Values</a>
+                <a class="offcanvas__item" data-scroll href="#career">Career</a>
+                <a class="offcanvas__item" data-scroll href="#interests">Interests</a>
+                <a class="offcanvas__item" data-scroll href="#blog">Blog</a>
+                <a class="offcanvas__item" data-scroll href="#contact">Contact</a>
+            </div>
+        </aside>
+
+        <main>
+            <article>
+                <section id="home" class="block -fullwidth">
+                    <div class="overlay"></div>
+                    <div class="block__content text-center">
+                        <h1>My Personal Website</h1>
+                        <h2 class="text-white">A showcase of my profile & aspirations</h2>
+                    </div>
+                   
+                </section>
+                
+                <section id="about" class="block__wrapper">
+                    <div class="block">
+                        <div class="block__content -text">
+                            <h2>About Me</h2>
+                            <div class="intro">
+                                Name:Edith Qu | Student ID:DC328581<br>
+                                Major:Computer Science | Grade:3<br>
+                                I am a student studying web development and I am very interested in learning front-end technology. I hope to showcase my personal information and career plans through this website.
+                            </div>
+                         </div>
+                      </div>
+                </section>
+
+                <section id="values" class="block__wrapper">
+                    <div class="block">
+                        <div class="block__content -text">
+                            <h2>My Values and Beliefs</h2>
+                            <div class="intro">
+                                I firmly believe that 'continuous learning' is the core of growth, maintaining a 'serious and responsible' attitude towards everything, and valuing 'integrity' and 'teamwork'.
+                                I believe that the value of technology lies in solving practical problems, rather than simply piling up technology..
+                            </div>
+                            <div class="grid">
+                                <div class="grid__item">
+                                    <header>Core Values</header>
+                                    <div class="grid__image" style="background-image:url(images/values.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="career" class="block__wrapper">
+                    <div class="block">
+                        <div class="block__content -text">
+                            <h2>My Career Aspirations</h2>
+                            <div class="intro">
+                                Short term goal: Master the core skills of HTML/CSS/JavaScript and be able to independently complete small and medium-sized front-end project development.<br>
+                                Long term goal: To become an engineer, participate in the design and implementation of enterprise level projects, and create value for products.
+                            </div>
+                            <div class="grid">
+                                <div class="grid__item">
+                                    <header>Skill Goals</header>
+                                    <div class="grid__image" style="background-image:url(images/career.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. My Interests and Hobbies 板块 -->
+                <section id="interests" class="block__wrapper">
+                    <div class="block">
+                        <div class="block__content -text">
+                            <h2>My Interests and Hobbies</h2>
+                            <div class="intro">
+                                Besides programming, I also have many rich hobbies and interests that make my life more fulfilling and help me relax both physically and mentally.
+                            </div>
+                            <div class="grid">
+                                <div class="grid__item">
+                                    <header>Hobbies</header>
+                                    <div class="grid__image" style="background-image:url(images/hobbies.jpg)"></div>
+                                        <p>Sports: Walking, Badminton</p>
+                                        <p>Creation: Writing technical blogs, working on small projects</p>
+                                        <p>Leisure activities: watching documentaries, listening to podcasts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+                <section id="blog" class="block__wrapper">
+                    <div class="block">
+                        <div class="block__content -text">
+                            <h2>My Blog Posts</h2>
+                            <div class="intro">
+                                This is where I record my learning experiences and thoughts, and share my growth process.
+                            </div>
+                            <div class="grid">
+                                <div class="grid__item">
+                                    <header>Recent Posts</header>
+                                    <div class="grid__image" style="background-image:url(images/blog.png)"></div>
+                                    <div class="grid__content">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="block__wrapper">
+                    <div class="block">
+                        <div class="block__content -text">
+                            <h2>My Contact</h2>
+                            <div class="grid">
+                                <div class="grid__item map">
+                                    <img src="images/contact.jpg" alt="Contact Image" />
+                                </div> 
+                                <div class="grid__item">
+                                    <header>Information</header>
+                                    <div class="grid__content">
+                                        <p>Email:DC32858@um.edu.mo</p>
+                                        <p>GitHub:https://github.com/Yting1002</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+        </main>
+
+        <footer>
+            &copy; 2026 My Personal Website | Student ID: DC328581| Name:Edith
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,74 @@
+<?php
+function readCustomers($filename) {
+    $customers = [];
+    // 1. 检查文件是否存在可读
+    if (!file_exists($filename) || !is_readable($filename)) {
+        return $customers;
+    }
+    
+    $handle = fopen($filename, 'r');
+    // 2. 逐行读取，严格校验字段
+    while (($line = fgets($handle)) !== false) {
+        $line = trim($line);
+        // 跳过空行
+        if (empty($line)) continue;
+        
+        // 3. 按分号分割字段，customers.txt每行12个字段
+        $fields = explode(';', $line);
+        // 4. 严格校验字段数，不足12个直接跳过，避免数组键缺失
+        if (count($fields) < 12) continue;
+        
+        // 5. 给每个字段做trim+空值兜底，彻底解决Undefined key
+        $customer = [
+            'id'         => isset($fields[0]) ? trim($fields[0]) : '',
+            'first_name' => isset($fields[1]) ? trim($fields[1]) : '',
+            'last_name'  => isset($fields[2]) ? trim($fields[2]) : '',
+            'email'      => isset($fields[3]) ? trim($fields[3]) : '',
+            'university' => isset($fields[4]) ? trim($fields[4]) : '',
+            'address'    => isset($fields[5]) ? trim($fields[5]) : '',
+            'city'       => isset($fields[6]) ? trim($fields[6]) : '',
+            'state'      => isset($fields[7]) ? trim($fields[7]) : '',
+            'country'    => isset($fields[8]) ? trim($fields[8]) : '',
+            'zip'        => isset($fields[9]) ? trim($fields[9]) : '',
+            'phone'      => isset($fields[10]) ? trim($fields[10]) : '',
+            'sales'      => isset($fields[11]) ? trim($fields[11]) : ''
+        ];
+        
+        // 6. 只保存id不为空的有效客户
+        if (!empty($customer['id'])) {
+            $customers[$customer['id']] = $customer;
+        }
+    }
+    fclose($handle);
+    return $customers;
+}
+
+function readOrders($customer, $filename) {
+    $orders = [];
+    if (!file_exists($filename) || !is_readable($filename)) {
+        return $orders;
+    }
+    
+    $handle = fopen($filename, 'r');
+    while (($line = fgets($handle)) !== false) {
+        $line = trim($line);
+        if (empty($line)) continue;
+        
+        $fields = explode(';', $line);
+        if (count($fields) < 5) continue;
+        
+        $order_customer_id = isset($fields[1]) ? trim($fields[1]) : '';
+        if ($order_customer_id === $customer) {
+            $orders[] = [
+                'order_id'    => isset($fields[0]) ? trim($fields[0]) : '',
+                'customer_id' => $order_customer_id,
+                'isbn'        => isset($fields[2]) ? trim($fields[2]) : '',
+                'title'       => isset($fields[3]) ? trim($fields[3]) : '',
+                'category'    => isset($fields[4]) ? trim($fields[4]) : ''
+            ];
+        }
+    }
+    fclose($handle);
+    return $orders;
+}
+?>

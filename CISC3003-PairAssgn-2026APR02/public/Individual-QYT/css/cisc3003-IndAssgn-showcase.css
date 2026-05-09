@@ -1,0 +1,38 @@
+#projects {
+  position: relative;
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+  padding: 1.5rem;
+  flex: 1;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  text-align: center;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+  margin-top: 1rem;
+}

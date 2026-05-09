@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Showcase | My Personal Website</title>
+    <link rel="stylesheet" href="../css/showcase.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <img class="header__image" src="../images/avatar.jpg" alt="My Avatar" />
+            <nav class="header__nav">
+                <a class="header__nav-item" href="cisc3003-sugEx03-home.html">Home</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-profile.html">Profile</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-summary.html">Summary</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-showcase.html">Showcase</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-qualification.html">Qualification</a>
+            </nav>
+            <a id="btnOpen" class="header__open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+            
+    <aside id="offcanvas" class="offcanvas">
+        <div class="offcanvas__content">
+            <a id="btnClose" class="offcanvas__close">
+                <span></span>
+                <span></span>                    
+            </a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-home.html">Home</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-profile.html">Profile</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-summary.html">Summary</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-showcase.html">Showcase</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-qualification.html">Qualification</a>
+        </div>
+    </aside>
+
+    <main>
+        <article>
+            <section id="learning-log" class="block__wrapper">
+                <div class="block">
+                    <div class="block__content -text">
+                        <h2>My Learning Log</h2>
+                        <div class="intro">
+                            <h3>Week 1: HTML Basic Structure</h3>
+                            <p>Learned semantic tags (header/nav/main) and image insertion.</p>
+                            <h4>Week 2: CSS Layout</h4>
+                            <p>Practiced Float layout and responsive design basics.</p>
+                        </div>
+                        <div class="grid">
+                            <div class="grid__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="accomplishments" class="block__wrapper">
+                <div class="block">
+                    <div class="block__content -text">
+                        <h2>My Accomplishments</h2>
+                        <div class="intro">
+                            <ul>
+                                <li>Completed CISC3003 SugEx02 (single-page personal website)</li>
+                                <li>Wrote 3 technical blogs about web development</li>
+                                <li>Participated in 2 class group discussions about CSS layout</li>
+                            </ul>
+                        </div>
+                        <div class="grid">
+                            <div class="grid__item">
+                                <img src="../images/accomplishments.png" alt="My Accomplishments" style="width:100%;border-radius:4px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="statement" class="block__wrapper">
+                <div class="block">
+                    <div class="block__content -text">
+                        <h2>My Statement of Purpose</h2>
+                        <div class="intro">
+                            I aim to become a professional front-end developer who can create user-friendly, visually appealing web applications. I will continue to learn cutting-edge front-end technologies and apply them to solve real-world problems, while improving my collaboration and communication skills in team projects.
+                        </div>
+                        <div class="grid">
+                            <div class="grid__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        CISC3003 Web Programming - 2026: DC328581 + Edith Qu
+    </footer>
+
+    <script>
+        const btnOpen = document.getElementById('btnOpen');
+        const btnClose = document.getElementById('btnClose');
+        const offcanvas = document.getElementById('offcanvas');
+        
+        btnOpen.addEventListener('click', () => {
+            offcanvas.classList.add('open');
+            document.body.classList.add('noscroll');
+        });
+        
+        btnClose.addEventListener('click', () => {
+            offcanvas.classList.remove('open');
+            document.body.classList.remove('noscroll');
+        });
+    </script>
+</body>
+</html>

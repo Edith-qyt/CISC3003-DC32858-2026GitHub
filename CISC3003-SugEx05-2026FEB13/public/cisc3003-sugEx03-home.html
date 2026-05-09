@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home | My Personal Website</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <img class="header__image" src="../images/avatar.jpg" alt="My Avatar" />
+            <nav class="header__nav">
+                <a class="header__nav-item" href="cisc3003-sugEx03-home.html">Home</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-profile.html">Profile</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-summary.html">Summary</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-showcase.html">Showcase</a>
+                <a class="header__nav-item" href="cisc3003-sugEx03-qualification.html">Qualification</a>
+            </nav>
+            <a id="btnOpen" class="header__open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+            
+    <aside id="offcanvas" class="offcanvas">
+        <div class="offcanvas__content">
+            <a id="btnClose" class="offcanvas__close">
+                <span></span>
+                <span></span>                    
+            </a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-home.html">Home</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-profile.html">Profile</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-summary.html">Summary</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-showcase.html">Showcase</a>
+            <a class="offcanvas__item" href="cisc3003-sugEx03-qualification.html">Qualification</a>
+        </div>
+    </aside>
+
+    <main>
+        <article>
+            <section id="home" class="block -fullwidth">
+                <div class="overlay"></div>
+                <div class="block__content text-center">
+                    <h1>My Home Page</h1>
+                    <h2 class="text-white">About Me</h2>
+                    <p class="text-white" style="margin-top:20px;">Name: Edith Qu | Student ID: DC328581<br>Major: Computer Science | Grade: 3</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        CISC3003 Web Programming - 2026: DC328581 + Edith Qu
+    </footer>
+
+    <script>
+        const btnOpen = document.getElementById('btnOpen');
+        const btnClose = document.getElementById('btnClose');
+        const offcanvas = document.getElementById('offcanvas');
+        
+        btnOpen.addEventListener('click', () => {
+            offcanvas.classList.add('open');
+            document.body.classList.add('noscroll');
+        });
+        
+        btnClose.addEventListener('click', () => {
+            offcanvas.classList.remove('open');
+            document.body.classList.remove('noscroll');
+        });
+    </script>
+</body>
+</html>

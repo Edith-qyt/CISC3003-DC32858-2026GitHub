@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;CISC3003-Practice10-2026APR03/check.txt&apos; to &apos;check.php&apos;" description="Rename resource &apos;check.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="check.txt" name="check.php" stamp="1775206645165" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;CISC3003-Practice10-2026APR03/fail.txt&apos; to &apos;fail.php&apos;" description="Rename resource &apos;fail.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="fail.txt" name="fail.php" stamp="1775206651333" updateReferences="true"/>
+</session>

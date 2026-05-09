@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualification | STUDIO.05</title>
+    <link rel="stylesheet" href="css/cisc3003-PairAssgn.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="qualification-page-body">
+    <header class="header">
+        <nav class="wrapper navbar">
+            <div class="brand">STUDIO<span>.05</span></div>
+            <div class="hamburger" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="cisc3003-PairAssgn.html" class="active">Home</a></li>
+                <li><a href="cisc3003-PairAssgn-Profile.html">Profile</a></li>
+                <li><a href="cisc3003-PairAssgn-Summary.html">Summary</a></li>
+                <li><a href="cisc3003-PairAssgn-Showcase.html">Showcase</a></li>
+                <li><a href="cisc3003-PairAssgn-Qualification.html">Qualification</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-green">
+            <div class="hero-wrapper">
+                <span class="tag-line">// PROVEN TRACK RECORD</span>
+                <h1>Expertise Qualification</h1>
+            </div>
+        </section>
+
+        <div class="main-layout wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-sticky">
+                    <p class="sidebar-label">CHAPTERS</p>
+                    <ul class="nav-wrapper">
+                        <li><a href="#history">01. History</a></li>
+                        <li><a href="#experience">02. Experience</a></li>
+                        <li><a href="#awards">03. Awards</a></li>
+                        <li><a href="#services">04. Services</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="content-area">
+                <section id="history" class="section-common">
+                    <span class="section-tag reveal-left">01 / OUR HISTORY</span>
+                    <h2 class="big-topic-title reveal delay-1">From Concept <br>To Reality.</h2>
+                    <p class="big-text reveal delay-2">Founded in early 2026, Studio.05 is the synergy of three creative minds. We began as a collaboration during high-level computer science projects, evolving into a professional unit that values precision and digital craft.</p>
+                </section>
+
+                <section id="experience" class="section-common qual-bg-grey">
+                    <span class="section-tag reveal-left">02 / OUR WORK EXPERIENCE</span>
+                    <h2 class="big-topic-title reveal delay-1">Our Work <br>Experience.</h2>
+                    <div class="exp-timeline">
+                        <div class="exp-row reveal delay-2">
+                            <div class="exp-time">2026 - NOW</div>
+                            <div class="exp-content">
+                                <h4>Freelance Team Leaders</h4>
+                                <p>Managing end-to-end web solutions for local startups, specializing in responsive architecture and CSS performance.</p>
+                            </div>
+                        </div>
+                        <div class="exp-row reveal delay-3">
+                            <div class="exp-time">2025 - 2026</div>
+                            <div class="exp-content">
+                                <h4>Corporate Internships</h4>
+                                <p>Gained hands-on experience in database optimization and large-scale UI component libraries at leading tech firms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="awards" class="section-common">
+                    <div class="award-header-center">
+                        <span class="section-tag reveal-left">03 / OUR AWARDS</span>
+                        <h2 class="big-topic-title center-text reveal delay-1">Meet Our Expert Members</h2>
+                    </div>
+
+                    <div class="award-flex-container">
+                        <div class="award-visual-box reveal delay-2">
+                            <img src="images/Award.png" alt="Award Sculpture" class="award-img">
+                        </div>
+
+                        <div class="award-list">
+                            <div class="award-item reveal delay-1">
+                                <span class="award-num">01.</span>
+                                <div class="award-info">
+                                    <div class="award-meta">
+                                        <span class="award-date">Feb 2025</span>
+                                        <span class="award-giver">Internal Award</span>
+                                    </div>
+                                    <h4 class="award-name">Creative Awards Winner</h4>
+                                </div>
+                            </div>
+
+                            <div class="award-item reveal delay-2">
+                                <span class="award-num">02.</span>
+                                <div class="award-info">
+                                    <div class="award-meta">
+                                        <span class="award-date">Feb 2025</span>
+                                        <span class="award-giver">ABC Giver</span>
+                                    </div>
+                                    <h4 class="award-name">Industry Award Recipient</h4>
+                                </div>
+                            </div>
+
+                            <div class="award-item reveal delay-3">
+                                <span class="award-num">03.</span>
+                                <div class="award-info">
+                                    <div class="award-meta">
+                                        <span class="award-date">March 2024</span>
+                                        <span class="award-giver">25 Agency</span>
+                                    </div>
+                                    <h4 class="award-name">Award-Winning Agency</h4>
+                                </div>
+                            </div>
+
+                            <div class="award-item active-award reveal delay-4">
+                                <span class="award-num">04.</span>
+                                <div class="award-info">
+                                    <div class="award-meta">
+                                        <span class="award-date">Sep 2023</span>
+                                        <span class="award-giver">Word Pressures</span>
+                                    </div>
+                                    <h4 class="award-name">Recognized for Excellence</h4>
+                                </div>
+                            </div>
+
+                            <div class="award-item reveal delay-5">
+                                <span class="award-num">05.</span>
+                                <div class="award-info">
+                                    <div class="award-meta">
+                                        <span class="award-date">Oct 2025</span>
+                                        <span class="award-giver">Times Awards</span>
+                                    </div>
+                                    <h4 class="award-name">Awarded for Innovation</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="services" class="section-common qual-bg-dark">
+                    <span class="section-tag reveal-left">04 / OUR SERVICES</span>
+                    <h2 class="big-topic-title reveal delay-1" style="color: #fff;">Detailed <br>Service List.</h2>
+                    <div class="service-grid">
+                        <div class="service-item reveal-zoom delay-1">
+                            <h4>Web Design</h4>
+                            <p>Focuses on aesthetic and user experience, creating visually appealing layouts.</p>
+                        </div>
+                        <div class="service-item reveal-zoom delay-2">
+                            <h4>Web Development</h4>
+                            <p>Involves coding and programming that makes a website functional and interactive.</p>
+                        </div>
+                        <div class="service-item reveal-zoom delay-3">
+                            <h4>Branding</h4>
+                            <p>Creating a unique identity for a company, encompassing logo and messaging.</p>
+                        </div>
+                        <div class="service-item reveal-zoom delay-4">
+                            <h4>Product Design</h4>
+                            <p>Process of creating products that solve user problems and enhance functionality.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer-dark">
+            <div class="footer-container wrapper">
+                <div class="footer-side">© 2026 Studio.05</div>
+                <div class="footer-main">
+                    CISC3003 - 2026: Pair 05 <br>ZHU YI FEI (DC327618) <br> LIN CHO KIO (DC325411) <br> QU YI TING (DC328581)
+                </div>
+                <div class="footer-side text-right">Privacy & Terms</div>
+            </div>
+        </footer>
+    </main>
+
+<script>
+    // --- 原有逻辑 ---
+    
+    // 1. 侧边栏滚动高亮逻辑
+    const sections = document.querySelectorAll('section[id]');
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+    window.addEventListener('scroll', () => {
+        let currentSection = '';
+        const windowHeight = window.innerHeight;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop - windowHeight / 2) {
+                currentSection = section.id;
+            }
+        });
+        sidebarLinks.forEach(link => {
+            link.classList.remove('active-section');
+            if (currentSection && link.getAttribute('href') === `#${currentSection}`) {
+                link.classList.add('active-section');
+            }
+        });
+    });
+
+    // 2. 奖项点击高亮逻辑
+    const awardItems = document.querySelectorAll('.award-item');
+
+    awardItems.forEach(item => {
+        item.addEventListener('click', () => {
+            awardItems.forEach(el => el.classList.remove('active-award'));
+            item.classList.add('active-award');
+        });
+    });
+
+    // --- 新增动效监听逻辑 ---
+
+    // 3. 滚动进入视口触发动画 (.reveal, .reveal-left, .reveal-zoom)
+    const observerOptions = {
+        threshold: 0.1, // 元素出现10%即触发
+        rootMargin: "0px 0px -50px 0px" // 提前或延迟触发的偏移量
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // 如果只需要触发一次动画，取消监听该元素:
+                // revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // 绑定所有需要动效的元素
+    const elementsToReveal = document.querySelectorAll('.reveal, .reveal-left, .reveal-zoom');
+    elementsToReveal.forEach(el => revealObserver.observe(el));
+
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navList = document.getElementById('nav-list');
+
+    menuBtn.addEventListener('click', () => {
+        // 切换菜单显示/隐藏
+        navList.classList.toggle('show');
+        // 切换汉堡图标动画效果
+        menuBtn.classList.toggle('open');
+    });
+
+    // 点击菜单项后自动关闭（提升体验）
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('show');
+            menuBtn.classList.remove('open');
+        });
+    });
+</script>
+</body>
+</html>

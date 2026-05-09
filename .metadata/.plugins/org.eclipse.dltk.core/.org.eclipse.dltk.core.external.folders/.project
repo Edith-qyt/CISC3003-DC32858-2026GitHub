@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.dltk.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link2</name>
+			<type>2</type>
+			<location>D:/UM/2026spring/cisc3003/install/data/.metadata/.plugins/org.eclipse.php.core/__language__/bedd5cc0</location>
+		</link>
+		<link>
+			<name>.link3</name>
+			<type>2</type>
+			<location>D:/UM/2026spring/cisc3003/install/cisc3003-DC328581-2026/.metadata/.plugins/org.eclipse.php.core/__language__/bedd5cc0</location>
+		</link>
+	</linkedResources>
+</projectDescription>

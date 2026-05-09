@@ -1,0 +1,55 @@
+<?php
+/**
+ * 讀取客戶數據文件並返回數組
+ */
+function readCustomers($filename) {
+    $customers = array();
+    // 讀取文件，忽略換行符和空行
+    $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    
+    foreach ($lines as $line) {
+        // customers.txt 使用分號 ";" 分隔
+        $data = explode(';', $line);
+        if (count($data) >= 12) {
+            $customers[$data[0]] = array(
+                'id' => $data[0],
+                'first' => $data[1],
+                'last' => $data[2],
+                'email' => $data[3],
+                'university' => $data[4],
+                'address' => $data[5],
+                'city' => $data[6],
+                'state' => $data[7],
+                'country' => $data[8],
+                'zip' => $data[9],
+                'phone' => $data[10],
+                'sales' => $data[11] // 用於 Sparklines 的逗號分隔數字
+            );
+        }
+    }
+    return $customers;
+}
+
+/**
+ * 根據客戶 ID 讀取其訂單信息
+ */
+function readOrders($customerID, $filename) {
+    $orders = array();
+    $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    
+    foreach ($lines as $line) {
+        // orders.txt 使用逗號 "," 分隔
+        $data = explode(',', $line);
+        // 索引 1 是 CustomerID
+        if ($data[1] == $customerID) {
+            $orders[] = array(
+                'id' => $data[0],
+                'isbn' => $data[2],
+                'title' => $data[3],
+                'category' => $data[4]
+            );
+        }
+    }
+    return $orders;
+}
+?>

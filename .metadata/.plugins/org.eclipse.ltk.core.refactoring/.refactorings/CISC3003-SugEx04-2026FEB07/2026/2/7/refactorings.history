@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CISC3003-SugEx04-2026FEB07/css/cisc3003-SugEx04-demo.css&apos; to &apos;demo.css&apos;" description="Rename resource &apos;cisc3003-SugEx04-demo.css&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="css/cisc3003-SugEx04-demo.css" name="demo.css" stamp="1771150134079" updateReferences="true"/>
+</session>
